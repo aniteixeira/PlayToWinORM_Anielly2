@@ -1,9 +1,6 @@
-require("dotenv").config();
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const sequelize = require('./database');
-const Usuario = require('./models/usuario');
 const Jogo = require('./models/jogo');
 
 const app = express();
@@ -26,10 +23,10 @@ app.post('/cadastrar-jogo', async (req, res) => {
 });
 
 // Iniciar o servidor
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, async () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-
+    console.log(`Servidor rodando na porta ${PORT}`);
+    
   // Sincronizar os modelos com o banco de dados
   try {
     await sequelize.sync();
