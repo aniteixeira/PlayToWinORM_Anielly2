@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro de Jogo</title>
+</head>
+<body>
+  <h1>Formulário de Cadastro de Jogo</h1>
+  <form action="/cadastrar-jogo" method="POST">
+    <label for="nome">Nome do Jogo:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+    <label for="desenvolvedora">Desenvolvedora:</label>
+    <input type="text" id="desenvolvedora" name="desenvolvedora" required><br><br>
+    <label for="ano_lancamento">Ano de Lançamento:</label>
+    <input type="number" id="ano_lancamento" name="ano_lancamento" required><br><br>
+    <button type="submit">Cadastrar Jogo</button>
+  </form>
+</body>
+</html>
